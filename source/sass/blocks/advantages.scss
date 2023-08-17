@@ -1,0 +1,49 @@
+.advantages {
+  padding: 20px 20px 49px;
+}
+
+.advantages__title {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0;
+  color: #000000;
+}
+
+.advantages__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  padding-top: 40px;
+}
+
+.advantages__background {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.advantages__background--leaf {
+  background-image: url("../img/icon-leaf.svg");
+}
+
+.advantages__background--cup {
+  background-image: url("../img/icon-cup.svg");
+}
+
+.advantages__background--eat {
+  background-image: url("../img/icon-eat.svg");
+}
+
+.advantages__background--alarm {
+  background-image: url("../img/icon-alarm.svg");
+}
+
+.advantages__text {
+margin: 0;
+}

@@ -1,0 +1,52 @@
+.hero {
+  position: relative;
+  background-image: url("../img/background-cat.jpg");
+  background-repeat: no-repeat;
+}
+
+.hero-background {
+  position: absolute;
+  z-index: 1;
+  width: 320px;
+  height: 302px;
+  background-color: rgba(104, 183, 56, 0.85);
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.hero__title {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 0;
+  padding: 27px 15px 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero__slogan {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 25px 15px 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero__img {
+  display: block;
+  padding-top: 29px;
+}
+
+.hero__button {
+  margin-top: 3px;
+}

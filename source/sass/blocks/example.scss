@@ -1,0 +1,89 @@
+.example {
+  padding: 25px 20px 40px;
+  background-color: #eaeaea;
+}
+
+.example__title {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0;
+  color: #000000;
+}
+
+.example__text {
+  margin: 0;
+  padding-top: 40px;
+}
+
+.example__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 32px;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.example__item {
+  position: relative;
+}
+
+.example__number {
+  margin: 0;
+  padding-top: 14px;
+  padding-bottom: 32px;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  background-image: url("../img/arch.svg");
+  background-repeat: no-repeat;
+}
+
+.example__description {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+}
+
+.example__list-expenses {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 20px 20px 0;
+}
+
+.example__expenses {
+  margin-right: 5px;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.example__price {
+  margin: 0;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
