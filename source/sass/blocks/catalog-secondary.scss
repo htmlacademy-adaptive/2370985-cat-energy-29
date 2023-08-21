@@ -23,13 +23,13 @@
   position: relative;
 }
 
-.product-list-secondary__card::before {
+.product-list-secondary__card--line::after {
   position: absolute;
   content: "";
-  width: 320px;
+  width: 280px;
   height: 1px;
   bottom: 0;
-  left: -20px;
+  left: 0px;
   background-color: #ebebeb;
 }
 
@@ -84,6 +84,7 @@
 
 .catalog-products-secondary__container {
   position: relative;
+  margin-top: 35px;
   background-image: url("../img/background-cat-in-house.jpg");
   background-repeat: no-repeat;
 }

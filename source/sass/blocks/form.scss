@@ -3,16 +3,6 @@
   padding: 27px 20px 0;
 }
 
-.form-container--line::after {
-  position: absolute;
-  content: "";
-  width: 320px;
-  height: 1px;
-  top: 0;
-  left: 0;
-  background-color: #ebebeb;
-}
-
 .form-container__title {
   margin: 0;
   font-family: Oswald;
@@ -38,9 +28,20 @@
 }
 
 .form-container__filter {
+  position: relative;
   margin: 0;
   padding: 0;
   border: none;
+}
+
+.form-container__filter--line::after {
+  position: absolute;
+  content: "";
+  width: 320px;
+  height: 1px;
+  bottom: 0;
+  left: -20px;
+  background-color: #ebebeb;
 }
 
 .form-container__filter--name {
@@ -78,6 +79,7 @@
 }
 
 .form-container__input {
+  flex-grow: 1;
   padding: 14px 14px 13px 15px;
   font-family: Oswald;
   font-style: normal;
@@ -94,26 +96,6 @@
   position: relative;
   padding-top: 22px;
   padding-bottom: 19px;
-}
-
-.form-container__filter--line::after {
-  position: absolute;
-  content: "";
-  width: 320px;
-  height: 1px;
-  top: 0;
-  left: -20px;
-  background-color: #ebebeb;
-}
-
-.form-container__filter--line::before {
-  position: absolute;
-  content: "";
-  width: 320px;
-  height: 1px;
-  bottom: 0;
-  left: -20px;
-  background-color: #ebebeb;
 }
 
 .form-container__item-secondary:not(:last-child) {
@@ -153,6 +135,7 @@
 }
 
 .form-container__input--comments {
+  resize: none;
   width: 100%;
   min-height: 150px;
   border: 1px solid #ebebeb;

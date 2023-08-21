@@ -30,17 +30,14 @@
 }
 
 .product-list__card {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr auto;
   padding: 20px 0 25px;
 }
 
-.product-list__card--line {
-  position: relative;
-}
-
-.product-list__card--line::after {
+.product-list__card-title--line::after {
   position: absolute;
   content: "";
   width: 320px;
@@ -50,7 +47,7 @@
   background-color: #ebebeb;
 }
 
-.product-list__card--line:last-child:before {
+.product-list__card-title--line:last-child::before {
   position: absolute;
   content: "";
   width: 320px;
