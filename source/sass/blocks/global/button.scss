@@ -1,0 +1,32 @@
+.button {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.button--primary {
+  display: grid;
+  align-items: center;
+  padding: 10px 16px;
+  color: #ffffff;
+  background-color: #68b738;
+}
+
+.button--secondary {
+  display: grid;
+  align-items: center;
+  padding: 10px 16px;
+  color: #444444;
+  background-color: #f2f2f2;
+}
+
+.button--no-border {
+  border: none;
+}

@@ -1,0 +1,40 @@
+.main-header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 13px 20px;
+}
+
+.main-header__logo {
+  display: flex;
+  align-items: center;
+  height: 38px;
+}
+
+.main-header__nav {
+  width: 24px;
+  height: 24px;
+}
+
+.popover__toggle {
+  margin: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  background-image: url("../img/button-menu.svg");
+  border: none;
+}
+
+.main-header--line::after {
+  position: absolute;
+  content: "";
+  width: 320px;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #ebebeb;
+}
