@@ -9,14 +9,29 @@
 
 <body>
   <div class="page-container">
-    <header class="main-header main-header--line">
-      <a class="main-header__logo logo-primary" href="#">
-        <img src="/img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта CAT ENERGY.">
+    <header class="main-header">
+      <a class="main-header__logo logo-icon" href="#">
+        <picture class="main-header__picture">
+          <source srcset="/img/logo-icon.svg" media="(min-width: 1440px)" width="70" height="59">
+          <source srcset="/img/logo-icon.svg" media="(min-width: 768px)" width="60" height="50">
+          <img src="/img/logo-icon-mobile.svg" width="33" height="38" alt="Логотип сайта CAT ENERGY.">
+        </picture>
       </a>
-      <a class="main-header__logo logo-secondary" href="#">
+      <a class="main-header__logo" href="#">
         <img src="/img/logo-cat-energy.svg" width="101" height="18" alt="Cайт CAT ENERGY.">
       </a>
-      <nav class="main-header__nav popover">
+      <ul class="main-header__nav">
+        <li class="main-header__item">
+          <a href="index.html">Главная</a>
+        </li>
+        <li class="main-header__item">
+          <a href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-header__item">
+          <a href="form.html">Подбор программы</a>
+        </li>
+      </ul>
+      <nav class="main-header__nav-popover">
         <button class="popover__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
@@ -27,10 +42,10 @@
                 <a class="main-header__logo-primary" href="#">
                   <img src="/img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта CAT ENERGY.">
                 </a>
-                <a class="main-header__logo-secondary" href="#">
+                <a class="main-header__logo" href="#">
                   <img src="/img/logo-cat-energy.svg" width="101" height="18" alt="Cайт CAT ENERGY.">
                 </a>
-                <nav class="main-header__nav popover">
+                <nav class="main-header__nav-popover popover">
                   <button class="popover__toggle" type="button">
                     <span class="visually-hidden">Закрыть.</span>
                   </button>
@@ -159,16 +174,23 @@
       </section>
     </main>
     <footer class="footer-container">
-      <div class="footer-container__contacts footer-container__contacts--background-color-secondary">
-        <a class="footer-container__sales" href="#">Приглашаем к сотрудничеству дилеров!</a>
-        <p class="footer-container__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="footer-container__contacts">
+        <a class="footer-container__sales" href="#">Приглашаем<br> к сотрудничеству<br> дилеров!</a>
+        <div class="footer-container__adress">
+          <p class="footer-container__street">ул. Большая<br> Конюшенная, д. 19/8</p>
+          <p class="footer-container__city">Санкт-Петербург</p>
+        </div>
       </div>
-      <img class="footer-container__map" src="/img/map.png" width="320" height="362" alt="Местоположение на карте.">
+      <picture>
+        <source srcset="/img/map-desktop.png" media="(min-width: 1440px)" width="1440" height="400">
+        <source srcset="/img/map-tablet.png" media="(min-width: 768px)" width="768" height="400">
+        <img class="footer-container__map" src="/img/map-mobile.png" width="320" height="362" alt="Местоположение на карте.">
+      </picture>
       <div class="footer-container__link-container footer-container__link-container--background-color-secondary">
         <ul class="footer-container__link">
           <li class="footer-container__item-link">
             <a class="footer-container__logo" href="index.html">
-              <img src="/img/logo-cat-energy.svg" width="128" height="24" alt="Cайт CAT ENERGY.">
+              <img class="footer-container__img" src="/img/logo-cat-energy.svg" width="128" height="24" alt="Cайт CAT ENERGY.">
             </a>
           </li>
           <li class="footer-container__item-link">

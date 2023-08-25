@@ -19,8 +19,17 @@ body {
 .page-container {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: auto;
   min-height: 100%;
   margin: 0 auto;
   background-color: #ffffff;
 }
+
+img {
+  display: block;
+}
+
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+$width: 100%;
