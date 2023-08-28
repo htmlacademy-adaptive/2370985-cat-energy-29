@@ -61,7 +61,7 @@
 }
 
 .main-header__item a {
-  font-family: Oswald;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -74,6 +74,12 @@
     font-size: 20px;
     line-height: normal;
     color: #ffffff;
+  }
+}
+
+.main-header__item--color a {
+  @media (min-width: $desktop-width) {
+    color: #111111;
   }
 }
 

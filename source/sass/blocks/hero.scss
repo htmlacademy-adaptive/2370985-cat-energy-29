@@ -32,15 +32,11 @@
   @media (min-width: $desktop-width) {
     height: 694px;
   }
-
 }
 
 .hero__background {
   width: $width;
   object-fit: cover;
-
-  @media (min-width: $desktop-width) {
-  }
 }
 
 .hero__container {
@@ -58,7 +54,7 @@
 }
 
 .hero__title {
-  font-family: Oswald;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -83,7 +79,7 @@
 }
 
 .hero__slogan {
-  font-family: Oswald;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 14px;
@@ -152,5 +148,4 @@
     margin-left: 80px;
     margin-bottom: 184px;
   }
-
 }
