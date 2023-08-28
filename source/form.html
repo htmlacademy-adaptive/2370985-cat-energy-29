@@ -4,19 +4,35 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="page-container">
-    <header class="main-header main-header--line">
-      <a class="main-header__logo logo-primary" href="#">
-        <img src="/img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта CAT ENERGY.">
+    <header class="main-header">
+      <a class="main-header__logo logo-icon" href="#">
+        <picture class="main-header__picture">
+          <source srcset="/img/logo-icon.svg" media="(min-width: 1440px)" width="70" height="59">
+          <source srcset="/img/logo-icon.svg" media="(min-width: 768px)" width="60" height="50">
+          <img src="/img/logo-icon-mobile.svg" width="33" height="38" alt="Логотип сайта CAT ENERGY.">
+        </picture>
       </a>
-      <a class="main-header__logo logo-secondary" href="#">
+      <a class="main-header__logo" href="#">
         <img src="/img/logo-cat-energy.svg" width="101" height="18" alt="Cайт CAT ENERGY.">
       </a>
-      <nav class="main-header__nav popover">
+      <ul class="main-header__nav">
+        <li class="main-header__item main-header__item--color">
+          <a href="index.html">Главная</a>
+        </li>
+        <li class="main-header__item main-header__item--color">
+          <a href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-header__item main-header__item--color">
+          <a href="form.html">Подбор программы</a>
+        </li>
+      </ul>
+      <nav class="main-header__nav-popover">
         <button class="popover__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
@@ -27,10 +43,10 @@
                 <a class="main-header__logo-primary" href="#">
                   <img src="/img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта CAT ENERGY.">
                 </a>
-                <a class="main-header__logo-secondary" href="#">
+                <a class="main-header__logo" href="#">
                   <img src="/img/logo-cat-energy.svg" width="101" height="18" alt="Cайт CAT ENERGY.">
                 </a>
-                <nav class="main-header__nav popover">
+                <nav class="main-header__nav-popover popover">
                   <button class="popover__toggle" type="button">
                     <span class="visually-hidden">Закрыть.</span>
                   </button>
@@ -51,11 +67,11 @@
       </nav>
     </header>
     <main class="main-container">
-      <section class="form-container">
+      <section class="form-container form-container--line">
         <h1 class="form-container__title">Подбор программы</h1>
         <p class="form-container__slogan">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
         <form class="form-container__form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="form-container__filter form-container__filter--name form-container__filter--line">
+          <fieldset class="form-container__filter form-container__filter--name">
             <legend class="visually-hidden">Данные кота.</legend>
             <ul class="form-container__list">
               <li class="form-container__item">
@@ -80,33 +96,33 @@
                 <label class="form-container__label">
                   <input class="form-container__input-button" type="checkbox" name="varieties" value="weight-loss"
                     checked>
-                  <span>Похудение</span>
+                  <span class="form-container__span">Похудение</span>
                 </label>
               </li>
               <li class="form-container__item-secondary">
                 <label class="form-container__label">
                   <input class="form-container__input-button" type="checkbox" name="varieties" value="mass-gain">
-                  <span>Набор массы</span>
+                  <span class="form-container__span">Набор массы</span>
                 </label>
               </li>
               <li class="form-container__item-secondary">
                 <label class="form-container__label">
                   <input class="form-container__input-button" type="checkbox" name="varieties" value="don't-know">
-                  <span>Не знаю (Нужен ваш совет)</span>
+                  <span class="form-container__span">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form-container__filter form-container__filter--contacts">
-            <legend class="form-container__legend form-container__legend--contacts">Контактные данные (владельца кота)
+            <legend class="form-container__legend">Контактные данные (владельца кота)
             </legend>
-            <ul class="form-container__list">
-              <li class="form-container__item">
+            <ul class="form-container__list form-container__list--contacts">
+              <li class="form-container__item form-container__item--margin-none">
                 <label class="form-container__label form-container__label--margin" for="form__email">E-mail:*</label>
                 <input class="form-container__input" type="email" name="email" id="form__email"
                   value="kuklachev@gmail.com" required>
               </li>
-              <li class="form-container__item">
+              <li class="form-container__item form-container__item--margin-none">
                 <label class="form-container__label form-container__label--margin" for="form__phone">Телефон:*</label>
                 <input class="form-container__input" type="tel" name="phone" id="form__phone" value="8 (960) 900-60-90"
                   required>
@@ -114,7 +130,7 @@
             </ul>
           </fieldset>
           <fieldset class="form-container__filter form-container__filter--comments">
-            <legend class="form-container__legend form-container__legend--comments">Комментарий</legend>
+            <legend class="form-container__legend">Комментарий</legend>
             <label for="form__comments">
               <span class="visually-hidden">Ваш комментарий.</span>
             </label>
@@ -122,31 +138,31 @@
               id="form__comments">Расскажите обо всех повадках кота</textarea>
           </fieldset>
           <fieldset class="form-container__filter form-container__filter--additionally">
-            <legend class="form-container__legend form-container__legend--additionally">Дополнительно</legend>
-            <ul class="form-container__list">
-              <li class="form-container__item-secondary">
+            <legend class="form-container__legend">Дополнительно</legend>
+            <ul class="form-container__list form-container__list--additionally">
+              <li class="form-container__item-secondary form-container__item-secondary--margin-none">
                 <label class="form-container__label">
                   <input class="form-container__input-button" type="radio" name="additionally" value="sweetener"
                     checked>
-                  <span>Cахарозаменитель</span>
+                  <span class="form-container__span">Cахарозаменитель</span>
                 </label>
               </li>
-              <li class="form-container__item-secondary">
+              <li class="form-container__item-secondary form-container__item-secondary--margin-none">
                 <label class="form-container__label">
                   <input class="form-container__input-button" type="radio" name="additionally" value="water">
-                  <span>Питьевая вода</span>
+                  <span class="form-container__span">Питьевая вода</span>
                 </label>
               </li>
-              <li class="form-container__item-secondary">
+              <li class="form-container__item-secondary form-container__item-secondary--margin-none">
                 <label class="form-container__label">
                   <input class="form-container__input-button" type="radio" name="additionally" value="milk">
-                  <span>Молоко</span>
+                  <span class="form-container__span">Молоко</span>
                 </label>
               </li>
-              <li class="form-container__item-secondary">
+              <li class="form-container__item-secondary form-container__item-secondary--margin-none">
                 <label class="form-container__label">
                   <input class="form-container__input-button" type="radio" name="additionally" value="vitamins">
-                  <span>Витамины</span>
+                  <span class="form-container__span">Витамины</span>
                 </label>
               </li>
             </ul>
@@ -160,15 +176,24 @@
     </main>
     <footer class="footer-container">
       <div class="footer-container__contacts footer-container__contacts--background-color-secondary">
-        <a class="footer-container__sales" href="#">Приглашаем к сотрудничеству дилеров!</a>
-        <p class="footer-container__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <a class="footer-container__sales" href="#">Приглашаем<br> к сотрудничеству<br> дилеров!</a>
+        <div class="footer-container__adress">
+          <p class="footer-container__street">ул. Большая<br> Конюшенная, д. 19/8</p>
+          <p class="footer-container__city">Санкт-Петербург</p>
+        </div>
       </div>
-      <img class="footer-container__map" src="/img/map.png" width="320" height="362" alt="Местоположение на карте.">
+      <picture>
+        <source srcset="/img/map-desktop.png" media="(min-width: 1440px)" width="1440" height="400">
+        <source srcset="/img/map-tablet.png" media="(min-width: 768px)" width="768" height="400">
+        <img class="footer-container__map" src="/img/map-mobile.png" width="320" height="362"
+          alt="Местоположение на карте.">
+      </picture>
       <div class="footer-container__link-container footer-container__link-container--background-color-secondary">
         <ul class="footer-container__link">
           <li class="footer-container__item-link">
             <a class="footer-container__logo" href="index.html">
-              <img src="/img/logo-cat-energy.svg" width="128" height="24" alt="Cайт CAT ENERGY.">
+              <img class="footer-container__img" src="/img/logo-cat-energy.svg" width="128" height="24"
+                alt="Cайт CAT ENERGY.">
             </a>
           </li>
           <li class="footer-container__item-link">

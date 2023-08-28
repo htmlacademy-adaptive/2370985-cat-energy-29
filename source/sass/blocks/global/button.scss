@@ -1,5 +1,5 @@
 .button {
-  font-family: Oswald;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -9,6 +9,11 @@
   text-decoration: none;
   box-sizing: border-box;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .button--primary {
@@ -29,4 +34,12 @@
 
 .button--no-border {
   border: none;
+}
+
+.button--index {
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 14px 26px;
+  }
 }
