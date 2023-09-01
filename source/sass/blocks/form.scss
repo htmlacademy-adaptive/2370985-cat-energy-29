@@ -1,12 +1,18 @@
 .form-container {
   position: relative;
+  width: 280px;
+  margin: 0 auto;
   padding: 27px 20px 0;
 
   @media (min-width: $tablet-width) {
+    width: 708px;
+    margin: 0 auto;
     padding: 65px 30px 60px;
   }
 
   @media (min-width: $desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
     padding: 74px 110px 79px;
   }
 }
@@ -14,9 +20,10 @@
 .form-container--line::after {
   position: absolute;
   content: "";
-  width: 100%;
+  width: calc(100% + 20px);
   height: 1px;
   top: 0;
+  left: -20px;
   background-color: #ebebeb;
 
   @media (min-width: $tablet-width) {
@@ -239,12 +246,23 @@
 }
 
 .form-container__legend {
+  padding: 0;
+}
+
+.form-container__legend-title {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  width: max-content;
+  margin: 0;
+  padding-right: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   color: #000000;
+  background-color: #ffffff;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
@@ -252,8 +270,9 @@
   }
 }
 
-.form-container__legend--contacts {
-  padding: 0;
+.line-title--legend-container-contacts {
+  width: calc(100% + 20px);
+  top: 18px;
 }
 
 .form-container__list--contacts {
@@ -288,7 +307,7 @@
 
 .form-container__input--comments {
   resize: none;
-  width: $width;
+  width: 100%;
   min-height: 150px;
   margin-top: 38px;
   border: 1px solid #ebebeb;

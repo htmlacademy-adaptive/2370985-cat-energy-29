@@ -1,11 +1,17 @@
 .catalog-products-primary {
+  width: 280px;
+  margin: 0 auto;
   padding: 0 20px;
 
   @media (min-width: $tablet-width) {
+    width: 708px;
+    margin: 0 auto;
     padding: 0 30px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
     padding: 0 110px;
   }
 }
@@ -48,7 +54,7 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: repeat(2, 250px);
+    grid-template-columns: repeat(2, 1fr);
     gap: 60px;
   }
 
@@ -70,6 +76,8 @@
     display: flex;
     flex-direction: column;
     padding: 0 37px 40px;
+    box-sizing: content-box;
+    background: linear-gradient(to bottom, #ffffff 81px, #f2f2f2 81px);
   }
 
   @media (min-width: $desktop-width) {
@@ -233,6 +241,7 @@
 .product-list__card--more {
   @media (min-width: $tablet-width) {
     align-self: flex-end;
+    background: #ffffff;
   }
 }
 

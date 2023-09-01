@@ -11,55 +11,29 @@
 <body>
   <div class="page-container">
     <header class="main-header">
-      <a class="main-header__logo logo-icon" href="#">
-        <picture class="main-header__picture">
-          <source srcset="/img/logo-icon.svg" media="(min-width: 1440px)" width="70" height="59">
-          <source srcset="/img/logo-icon.svg" media="(min-width: 768px)" width="60" height="50">
-          <img src="/img/logo-icon-mobile.svg" width="33" height="38" alt="Логотип сайта CAT ENERGY.">
-        </picture>
-      </a>
-      <a class="main-header__logo" href="#">
-        <img src="/img/logo-cat-energy.svg" width="101" height="18" alt="Cайт CAT ENERGY.">
-      </a>
-      <ul class="main-header__nav">
-        <li class="main-header__item main-header__item--color">
-          <a href="index.html">Главная</a>
-        </li>
-        <li class="main-header__item main-header__item--color">
-          <a href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="main-header__item main-header__item--color">
-          <a href="form.html">Подбор программы</a>
-        </li>
-      </ul>
-      <nav class="main-header__nav-popover">
+      <nav class="main-nav">
+        <a class="main-header__logo logo-icon" href="#">
+          <picture class="main-header__picture">
+            <source srcset="/img/logo-icon.svg" media="(min-width: 1440px)" width="70" height="59">
+            <source srcset="/img/logo-icon.svg" media="(min-width: 768px)" width="60" height="50">
+            <img src="/img/logo-icon-mobile.svg" width="33" height="38" alt="Логотип сайта CAT ENERGY.">
+          </picture>
+        </a>
+        <a class="main-header__logo" href="#">
+          <img src="/img/logo-cat-energy.svg" width="101" height="18" alt="Cайт CAT ENERGY.">
+        </a>
         <button class="popover__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
-        <div class="popover__container">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <div class="site-list__container">
-                <a class="main-header__logo-primary" href="#">
-                  <img src="/img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта CAT ENERGY.">
-                </a>
-                <a class="main-header__logo" href="#">
-                  <img src="/img/logo-cat-energy.svg" width="101" height="18" alt="Cайт CAT ENERGY.">
-                </a>
-                <nav class="main-header__nav-popover popover">
-                  <button class="popover__toggle" type="button">
-                    <span class="visually-hidden">Закрыть.</span>
-                  </button>
-                </nav>
-              </div>
-            </li>
-            <li class="site-list__item">
+        <div class="popover-container">
+          <ul class="popover-container__nav">
+            <li class="popover-container__item">
               <a href="index.html">Главная</a>
             </li>
-            <li class="site-list__item">
+            <li class="popover-container__item">
               <a href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-list__item">
+            <li class="popover-container__item">
               <a href="form.html">Подбор программы</a>
             </li>
           </ul>
@@ -114,7 +88,11 @@
             </ul>
           </fieldset>
           <fieldset class="form-container__filter form-container__filter--contacts">
-            <legend class="form-container__legend">Контактные данные (владельца кота)
+            <legend class="form-container__legend">
+              <div>
+                <span class="line-title line-title--legend-container-contacts"></span>
+                <h2 class="form-container__legend-title">Контактные данные<br> (владельца кота)</h2>
+              </div>
             </legend>
             <ul class="form-container__list form-container__list--contacts">
               <li class="form-container__item form-container__item--margin-none">
@@ -249,6 +227,8 @@
       </div>
     </footer>
   </div>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>

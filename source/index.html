@@ -11,55 +11,29 @@
 <body>
   <div class="page-container">
     <header class="main-header">
-      <a class="main-header__logo logo-icon" href="#">
-        <picture class="main-header__picture">
-          <source srcset="/img/logo-icon.svg" media="(min-width: 1440px)" width="70" height="59">
-          <source srcset="/img/logo-icon.svg" media="(min-width: 768px)" width="60" height="50">
-          <img src="/img/logo-icon-mobile.svg" width="33" height="38" alt="Логотип сайта CAT ENERGY.">
-        </picture>
-      </a>
-      <a class="main-header__logo" href="#">
-        <img src="/img/logo-cat-energy.svg" width="101" height="18" alt="Cайт CAT ENERGY.">
-      </a>
-      <ul class="main-header__nav">
-        <li class="main-header__item">
-          <a href="index.html">Главная</a>
-        </li>
-        <li class="main-header__item">
-          <a href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="main-header__item">
-          <a href="form.html">Подбор программы</a>
-        </li>
-      </ul>
-      <nav class="main-header__nav-popover">
+      <nav class="main-nav">
+        <a class="main-header__logo logo-icon" href="#">
+          <picture class="main-header__picture">
+            <source srcset="/img/logo-icon.svg" media="(min-width: 1440px)" width="70" height="59">
+            <source srcset="/img/logo-icon.svg" media="(min-width: 768px)" width="60" height="50">
+            <img src="/img/logo-icon-mobile.svg" width="33" height="38" alt="Логотип сайта CAT ENERGY.">
+          </picture>
+        </a>
+        <a class="main-header__logo" href="#">
+          <img src="/img/logo-cat-energy.svg" width="101" height="18" alt="Cайт CAT ENERGY.">
+        </a>
         <button class="popover__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
-        <div class="popover__container">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <div class="site-list__container">
-                <a class="main-header__logo-primary" href="#">
-                  <img src="/img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта CAT ENERGY.">
-                </a>
-                <a class="main-header__logo" href="#">
-                  <img src="/img/logo-cat-energy.svg" width="101" height="18" alt="Cайт CAT ENERGY.">
-                </a>
-                <nav class="main-header__nav-popover popover">
-                  <button class="popover__toggle" type="button">
-                    <span class="visually-hidden">Закрыть.</span>
-                  </button>
-                </nav>
-              </div>
-            </li>
-            <li class="site-list__item">
+        <div class="popover-container">
+          <ul class="popover-container__nav">
+            <li class="popover-container__item">
               <a href="index.html">Главная</a>
             </li>
-            <li class="site-list__item">
+            <li class="popover-container__item">
               <a href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-list__item">
+            <li class="popover-container__item">
               <a href="form.html">Подбор программы</a>
             </li>
           </ul>
@@ -73,7 +47,7 @@
           <img class="hero__background" src="/img/background-cat-mobile.jpg" width="320" height="302" alt="Рыжий кот.">
         </picture>
         <div class="hero__container">
-          <h1 class="hero__title">Функциональное питание для котов</h1>
+          <h1 class="hero__title">Функциональное<br> питание для котов</h1>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
           <picture class="hero__picture">
             <source srcset="/img/cat-energy-desktop.png" media="(min-width: 1440px)" width="552" height="499">
@@ -87,14 +61,20 @@
         <h2 class="visually-hidden">Разновидности питания.</h2>
         <ul class="varieties__list">
           <li class="varieties__item">
-            <h3 class="varieties__title title-background title-background--slim">Похудение</h3>
+            <span class="varieties__picture">
+              <img class="varieties__image varieties__image--first" src="/img/cat-slim.svg" width="36" height="50" alt="Эмблема CAT ENERGY SLIM.">
+            </span>
+            <h3 class="varieties__title">Похудение</h3>
             <p class="varieties__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора
               на
               диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <div class="varieties__container"><a class="button varieties-button" href="#">Каталог slim</a></div>
           </li>
           <li class="varieties__item">
-            <h3 class="varieties__title title-background title-background--pro">Набор массы</h3>
+            <span class="varieties__picture">
+              <img class="varieties__image varieties__image--secondary" src="/img/cat-pro.svg" width="67" height="28" alt="Эмблема CAT ENERGY PRO.">
+            </span>
+            <h3 class="varieties__title">Набор массы</h3>
             <p class="varieties__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
               поможет вашему коту нарастить необходимые мышцы!</p>
             <div class="varieties__container"><a class="button varieties-button" href="#">Каталог pro</a></div>
@@ -104,25 +84,25 @@
       <section class="advantages">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
-          <li class="advantages__item advantages__item--one">
+          <li class="advantages__item">
             <span class="advantages__background advantages__background--leaf">
               <span class="visually-hidden">Лист растения.</span>
             </span>
             <p class="advantages__text">Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
-          <li class="advantages__item advantages__item--two">
+          <li class="advantages__item">
             <span class="advantages__background advantages__background--hot">
               <span class="visually-hidden">Горячая вода.</span>
             </span>
             <p class="advantages__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
           </li>
-          <li class="advantages__item advantages__item--three">
+          <li class="advantages__item">
             <span class="advantages__background advantages__background--eat">
               <span class="visually-hidden">Еда.</span>
             </span>
             <p class="advantages__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
-          <li class="advantages__item advantages__item--four">
+          <li class="advantages__item">
             <span class="advantages__background advantages__background--alarm">
               <span class="visually-hidden">Будильник.</span>
             </span>
@@ -150,11 +130,27 @@
             <dd class="example__price">15 000 РУБ.</dd>
           </div>
         </dl>
-        <img class="example__img-primary" src="/img/cat-thick.jpg" width="280" height="256" alt="Толстый кот">
-        <img class="example__img-secondary" src="/img/cat-thin.jpg" width="280" height="256" alt="Худой кот">
-        <button class="example__button" type="button">
-          <span class="visually-hidden">Изменить параметры.</span>
-        </button>
+        <div class="example__container-picture">
+          <picture class="example__picture example__picture--primary">
+            <source srcset="/img/cat-thick-tablet.png" media="(min-width: 768px)" width="560" height="512">
+            <img class="example__img-primary" src="/img/cat-thick-mobile.png" width="280" height="256" alt="Толстый кот">
+          </picture>
+          <picture class="example__picture example__picture--secondary">
+            <source srcset="/img/cat-thin-tablet.png" media="(min-width: 768px)" width="560" height="512">
+            <img class="example__img-secondary" src="/img/cat-thin-mobile.png" width="280" height="256" alt="Худой кот">
+          </picture>
+          <button class="example__button" type="button">
+            <span class="example__knob">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="38" height="38" rx="19" fill="white"/>
+                <path d="M16 11L8 20L16 29V11Z" fill="#666666"/>
+                <path d="M32 20L24 11V29L32 20Z" fill="#666666"/>
+                <rect x="1" y="1" width="38" height="38" rx="19" stroke="#666666" stroke-width="2"/>
+                </svg>
+            </span>
+            <span class="visually-hidden">Изменить параметры.</span>
+          </button>
+        </div>
       </section>
     </main>
     <footer class="footer-container">
@@ -230,6 +226,8 @@
       </div>
     </footer>
   </div>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
