@@ -1,20 +1,33 @@
 .main-header {
-  position: relative;
+  width: 280px;
+  margin: 0 auto;
+  padding: 13px 20px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: start;
+    width: 708px;
+    margin: 0 auto;
+    padding: 25px 30px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 55px 110px 0;
+    z-index: 1;
+  }
+}
+
+.main-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding: 13px 20px;
 
   @media (min-width: $tablet-width) {
+    flex-wrap: nowrap;
     justify-content: start;
-    padding: 25px 30px 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 55px 110px 0;
-    z-index: 1;
   }
 }
 
@@ -41,65 +54,51 @@
   }
 }
 
-
-.main-header__nav {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    margin-left: auto;
-    padding: 0;
-  }
-}
-
-.main-header__item:not(:last-child) {
-
-  margin-right: 33px;
-}
-
-.main-header__item a {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #000000;
-
-  @media (min-width: $desktop-width) {
-    font-size: 20px;
-    line-height: normal;
-    color: #ffffff;
-  }
-}
-
-.main-header__item--color a {
-  @media (min-width: $desktop-width) {
-    color: #111111;
-  }
-}
-
-.main-header__nav-popover {
+.popover__toggle {
+  position: relative;
+  padding: 0;
   width: 24px;
   height: 24px;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: none;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
-.popover__toggle {
-  margin: 0;
-  padding: 0;
+.popover__toggle::after {
+  content: "";
+  position: absolute;
   width: 24px;
-  height: 24px;
-  background-color: #ffffff;
-  background-image: url("../img/button-menu.svg");
-  border: none;
+  height: 2px;
+  top: 2px;
+  left: 0;
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.main-nav--opened .popover__toggle {
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 2px;
+    top: 12px;
+    left: -4px;
+    background-color: #000000;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
 }
 
 .main-header--line::after {
@@ -112,6 +111,95 @@
   background-color: #ebebeb;
 }
 
-.popover__container {
+
+.main-nav--opened .popover-container {
+  @media (max-width: 767px) {
+    display: inline-block;
+    position: absolute;
+    width: 320px;
+    top: 64px;
+    left: 0;
+    z-index: 10;
+
+    @media (min-width: 320px) {
+      width: 100%;
+    }
+  }
+}
+
+.popover-container {
   display: none;
+
+  @media (min-width: 320px) {
+    width: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: static;
+  }
+}
+
+.popover-container__nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: end;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.popover-container__item {
+  border-top: 1px solid #e6e6e6;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.popover-container__item:not(:last-child) {
+  @media (min-width: $tablet-width) {
+    margin-right: 33px;
+  }
+}
+
+.popover-container__item a {
+  display: block;
+  padding: 23px 12px;
+  text-align: center;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: transparent;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: normal;
+    color: #ffffff;
+  }
+}
+
+.popover-container__item--color a {
+  @media (min-width: $desktop-width) {
+    color: #111111;
+  }
 }
