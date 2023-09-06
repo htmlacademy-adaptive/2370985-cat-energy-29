@@ -7,60 +7,89 @@
   }
 }
 
-.hero__background-container {
-  position: absolute;
-  width: 100%;
-  height: 302px;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: block;
-    position: absolute;
-    width: 720px;
-    top: -114px;
-    right: 0;
-  }
-}
-
-.hero__background-ground::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 302px;
-  top: 0;
-  left: 0;
-  background-color: rgba(104, 183, 56, 0.85);
-
-  @media (min-width: $desktop-width) {
-    height: 694px;
-  }
-}
-
-.hero__background {
-  width: 100%;
-  object-fit: cover;
-}
-
 .hero__container {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   width: 280px;
   margin: 0 auto;
   padding: 0 20px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 302px;
+    top: 0;
+    left: 0;
+    background-image: url("/img/background-cat-mobile.jpg");
+    background-repeat: no-repeat;
+    z-index: -2;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/background-cat-mobile@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 302px;
+    top: 0;
+    left: 0;
+    background-color: rgba(104, 183, 56, 0.85);
+    z-index: -1;
+  }
 
   @media (min-width: $tablet-width) {
     width: 708px;
     margin: 0 auto;
     padding: 0 30px;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 1220px;
     margin: 0 auto;
     padding: 0 110px;
+
+    &::after {
+      display: block;
+      width: 720px;
+      height: 694px;
+      top: -114px;
+      right: 0;
+      left: auto;
+      background-image: url("/img/background-cat-desktop.jpg");
+      background-repeat: no-repeat;
+      z-index: -2;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("/img/background-cat-desktop@2x.jpg");
+        background-size: cover;
+      }
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 720px;
+      height: 694px;
+      top: -114px;
+      right: 0;
+      left: auto;
+      background-color: rgba(104, 183, 56, 0.85);
+      z-index: -1;
+    }
   }
 }
 

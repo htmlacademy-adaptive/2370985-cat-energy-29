@@ -23,6 +23,7 @@
     display: flex;
     justify-content: space-between;
     padding: 61px 30px;
+    background-color: #f2f2f2;
   }
 
   @media (min-width: $desktop-width) {
@@ -34,10 +35,6 @@
     left: 110px;
     background-color: #ffffff;
   }
-}
-
-.footer-container__contacts--background-color-secondary {
-  background-color: #f2f2f2;
 }
 
 .footer-container__sales {
@@ -95,7 +92,7 @@
   }
 }
 
-.map {
+.footer-container__map {
   display: block;
   width: 100%;
 

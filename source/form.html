@@ -27,13 +27,13 @@
         </button>
         <div class="popover-container">
           <ul class="popover-container__nav">
-            <li class="popover-container__item">
+            <li class="popover-container__item popover-container__item--color">
               <a href="index.html">Главная</a>
             </li>
-            <li class="popover-container__item">
+            <li class="popover-container__item popover-container__item--color">
               <a href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="popover-container__item">
+            <li class="popover-container__item popover-container__item--color">
               <a href="form.html">Подбор программы</a>
             </li>
           </ul>
@@ -67,21 +67,26 @@
             <legend class="visually-hidden">Выбор питания.</legend>
             <ul class="form-container__list">
               <li class="form-container__item-secondary">
-                <label class="form-container__label">
-                  <input class="form-container__input-button" type="checkbox" name="varieties" value="weight-loss"
-                    checked>
+                <label class="form-container__label form-container__label--box">
+                  <input class="visually-hidden form-container__input-button" type="radio" name="varieties"
+                    value="weight-loss" checked>
+                  <span class="form-container__mark form-container__mark--alternative"></span>
                   <span class="form-container__span">Похудение</span>
                 </label>
               </li>
               <li class="form-container__item-secondary">
-                <label class="form-container__label">
-                  <input class="form-container__input-button" type="checkbox" name="varieties" value="mass-gain">
+                <label class="form-container__label form-container__label--box">
+                  <input class="visually-hidden form-container__input-button" type="radio" name="varieties"
+                    value="mass-gain">
+                  <span class="form-container__mark form-container__mark--alternative"></span>
                   <span class="form-container__span">Набор массы</span>
                 </label>
               </li>
               <li class="form-container__item-secondary">
-                <label class="form-container__label">
-                  <input class="form-container__input-button" type="checkbox" name="varieties" value="don't-know">
+                <label class="form-container__label form-container__label--box">
+                  <input class="visually-hidden form-container__input-button" type="radio" name="varieties"
+                    value="don't-know">
+                  <span class="form-container__mark form-container__mark--alternative"></span>
                   <span class="form-container__span">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
@@ -116,27 +121,34 @@
             <legend class="form-container__legend">Дополнительно</legend>
             <ul class="form-container__list form-container__list--additionally">
               <li class="form-container__item-secondary form-container__item-secondary--margin-none">
-                <label class="form-container__label">
-                  <input class="form-container__input-button" type="radio" name="additionally" value="sweetener"
-                    checked>
+                <label class="form-container__label form-container__label--box">
+                  <input class="visually-hidden form-container__input-button" type="checkbox" name="additionally"
+                    value="sweetener" checked>
+                  <span class="form-container__mark"></span>
                   <span class="form-container__span">Cахарозаменитель</span>
                 </label>
               </li>
               <li class="form-container__item-secondary form-container__item-secondary--margin-none">
-                <label class="form-container__label">
-                  <input class="form-container__input-button" type="radio" name="additionally" value="water">
+                <label class="form-container__label form-container__label--box">
+                  <input class="visually-hidden form-container__input-button" type="checkbox" name="additionally"
+                    value="water">
+                  <span class="form-container__mark"></span>
                   <span class="form-container__span">Питьевая вода</span>
                 </label>
               </li>
               <li class="form-container__item-secondary form-container__item-secondary--margin-none">
-                <label class="form-container__label">
-                  <input class="form-container__input-button" type="radio" name="additionally" value="milk">
+                <label class="form-container__label form-container__label--box">
+                  <input class="visually-hidden form-container__input-button" type="checkbox" name="additionally"
+                    value="milk">
+                  <span class="form-container__mark"></span>
                   <span class="form-container__span">Молоко</span>
                 </label>
               </li>
               <li class="form-container__item-secondary form-container__item-secondary--margin-none">
-                <label class="form-container__label">
-                  <input class="form-container__input-button" type="radio" name="additionally" value="vitamins">
+                <label class="form-container__label form-container__label--box">
+                  <input class="visually-hidden form-container__input-button" type="checkbox" name="additionally"
+                    value="vitamins">
+                  <span class="form-container__mark"></span>
                   <span class="form-container__span">Витамины</span>
                 </label>
               </li>
@@ -159,7 +171,7 @@
       </div>
       <section>
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <iframe class="map"
+        <iframe class="footer-container__map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876791645!2d30.32046711286268!3d59.93871647481052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1693664080991!5m2!1sru!2sru"
           width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"

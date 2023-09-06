@@ -128,11 +128,13 @@
 }
 
 .form-container__label {
+  display: block;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   text-transform: uppercase;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -214,14 +216,63 @@
   margin-bottom: 13px;
 }
 
-.form-container__input-button {
-  margin: 0;
-  margin-right: 15px;
+.form-container__label--box {
+  position: relative;
+  padding-left: 45px;
 
   @media (min-width: $tablet-width) {
-    margin-right: 20px;
+    padding-left: 60px;
   }
 }
+
+.form-container__mark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form-container__mark--alternative {
+  border-radius: 50%;
+}
+
+.form-container__input-button[type="radio"]:checked + .form-container__mark::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #68b738;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.form-container__input-button[type="checkbox"]:checked + .form-container__mark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+  background-image: url("/img/tick.svg");
+  background-repeat: no-repeat;
+}
+
 
 .form-container__span {
   display: inline-block;

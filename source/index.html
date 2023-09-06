@@ -6,6 +6,7 @@
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico"><!-- 32×32 -->
 </head>
 
 <body>
@@ -42,17 +43,13 @@
     </header>
     <main class="main-container">
       <section class="hero">
-        <picture class="hero__background-container hero__background-ground">
-          <source srcset="/img/background-cat-desktop.jpg" media="(min-width: 1440px)" width="720" height="694">
-          <img class="hero__background" src="/img/background-cat-mobile.jpg" width="320" height="302" alt="Рыжий кот.">
-        </picture>
         <div class="hero__container">
           <h1 class="hero__title">Функциональное<br> питание для котов</h1>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
           <picture class="hero__picture">
-            <source srcset="/img/cat-energy-desktop.png" media="(min-width: 1440px)" width="552" height="499">
-            <source srcset="/img/cat-energy-tablet.png" media="(min-width: 768px)" width="708" height="609">
-            <img class="hero__img" src="/img/cat-energy-mobile.png" width="280" height="270" alt="Питание CAT ENERGY PRO.">
+            <source srcset="/img/cat-energy-desktop.png, /img/cat-energy-desktop@2x.png 2x" media="(min-width: 1440px)" width="552" height="499">
+            <source srcset="/img/cat-energy-tablet.png, /img/cat-energy-tablet@2x.png 2x" media="(min-width: 768px)" width="708" height="609">
+            <img class="hero__img" src="/img/cat-energy-mobile.png"  srcset="/img/cat-energy-mobile@2x.png 2x" width="280" height="270" alt="Питание CAT ENERGY PRO.">
           </picture>
           <a class="hero__button button button--primary button--index" href="form.html">Подобрать программу</a>
         </div>
@@ -131,14 +128,18 @@
           </div>
         </dl>
         <div class="example__container-picture">
-          <picture class="example__picture example__picture--primary">
-            <source srcset="/img/cat-thick-tablet.png" media="(min-width: 768px)" width="560" height="512">
-            <img class="example__img-primary" src="/img/cat-thick-mobile.png" width="280" height="256" alt="Толстый кот">
-          </picture>
-          <picture class="example__picture example__picture--secondary">
-            <source srcset="/img/cat-thin-tablet.png" media="(min-width: 768px)" width="560" height="512">
-            <img class="example__img-secondary" src="/img/cat-thin-mobile.png" width="280" height="256" alt="Худой кот">
-          </picture>
+          <div class="example__picture example__picture--primary">
+            <picture>
+              <source srcset="/img/cat-thick-tablet.png, /img/cat-thick-tablet@2x.png 2x" media="(min-width: 768px)" width="560" height="512">
+              <img class="example__img-primary" src="/img/cat-thick-mobile.png" srcset="/img/cat-thick-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот">
+            </picture>
+          </div>
+          <div class="example__picture example__picture--secondary">
+            <picture>
+              <source srcset="/img/cat-thin-tablet.png, /img/cat-thin-tablet@2x.png 2x" media="(min-width: 768px)" width="560" height="512">
+              <img class="example__img-secondary" src="/img/cat-thin-mobile.png" srcset="/img/cat-thin-mobile@2x.png 2x" width="280" height="256" alt="Худой кот">
+            </picture>
+          </div>
           <button class="example__button" type="button">
             <span class="example__knob">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -163,7 +164,7 @@
       </div>
       <section>
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876791645!2d30.32046711286268!3d59.93871647481052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1693664080991!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Офис компании по адресу Большая Конюшенная, 19/8, Санкт-Петербург"></iframe>
+        <iframe class="footer-container__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876791645!2d30.32046711286268!3d59.93871647481052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1693664080991!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="" referrerpolicy="no-referrer-when-downgrade" title="Офис компании по адресу Большая Конюшенная, 19/8, Санкт-Петербург"></iframe>
       </section>
       <div class="footer-container__link-container footer-container__link-container--background-color-secondary">
         <ul class="footer-container__link">
