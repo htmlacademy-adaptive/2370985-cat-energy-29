@@ -1,16 +1,10 @@
 .footer-container {
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
-
-  @media (min-width: $tablet-width) {
-    width: 768px;
-    margin: 0 auto;
-  }
 
   @media (min-width: $desktop-width) {
     position: relative;
     width: 1440px;
-    margin: 0 auto;
   }
 }
 
@@ -23,6 +17,7 @@
     display: flex;
     justify-content: space-between;
     padding: 61px 30px;
+    background-color: #f2f2f2;
   }
 
   @media (min-width: $desktop-width) {
@@ -34,10 +29,6 @@
     left: 110px;
     background-color: #ffffff;
   }
-}
-
-.footer-container__contacts--background-color-secondary {
-  background-color: #f2f2f2;
 }
 
 .footer-container__sales {
@@ -98,7 +89,10 @@
 .footer-container__map {
   display: block;
   width: 100%;
-  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 }
 
 .footer-container__link-container {
@@ -153,9 +147,11 @@
   }
 }
 
-
 .footer-container__logo {
   display: block;
+  width: 128px;
+  height: 24px;
+  margin: 0 auto;
   padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
@@ -163,10 +159,18 @@
   }
 }
 
-.footer-container__img {
-  margin: 0 auto;
+.footer-container__logo-icon {
+  fill: #111111;
 }
 
+.footer-container__logo:hover .footer-container__logo-icon,
+.footer-container__logo:focus-within .footer-container__logo-icon {
+  fill: #3e3e3e;
+}
+
+.footer-container__logo:active .footer-container__logo-icon {
+  fill: #6b6b6b;
+}
 
 .footer-container__list {
   padding: 0;
@@ -187,6 +191,25 @@
 
 .social-list__item:not(:last-child) {
   margin-right: 24px;
+}
+
+.social-list__link {
+  width: 28px;
+  height: 22px;
+}
+
+.social-list__link-icon {
+  fill: #666666;
+}
+
+.social-list__link:hover .social-list__link-icon,
+.social-list__link:focus-within .social-list__link-icon {
+  fill: #68b738;
+}
+
+.social-list__link:active .social-list__link-icon {
+  fill: #68b738;
+  opacity: 0.3;
 }
 
 .footer-container__container {
@@ -212,4 +235,27 @@
   @media (min-width: $tablet-width) {
     margin-right: 23px;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.creator__link {
+  width: 27px;
+  height: 34px;
+}
+
+.creator__link-icon {
+  fill: #666666;
+}
+
+.creator__link:hover .creator__link-icon,
+.creator__link:focus-within .creator__link-icon {
+  fill: #68b738;
+}
+
+.creator__link:active .creator__link-icon {
+  fill: #68b738;
+  opacity: 0.3;
 }
