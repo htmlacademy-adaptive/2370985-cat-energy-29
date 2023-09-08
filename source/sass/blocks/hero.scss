@@ -1,5 +1,7 @@
 .hero {
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
 
   @media (min-width: $desktop-width) {
     width: 1440px;
@@ -10,7 +12,6 @@
 .hero__container {
   position: relative;
   z-index: 1;
-  width: 280px;
   margin: 0 auto;
   padding: 0 20px;
 
@@ -23,11 +24,11 @@
     left: 0;
     background-image: url("/img/background-cat-mobile.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     z-index: -2;
 
     @media (min-resolution: 2dppx) {
       background-image: url("/img/background-cat-mobile@2x.jpg");
-      background-size: cover;
     }
   }
 
@@ -162,16 +163,22 @@
 }
 
 .hero__img {
+  width: 280px;
+  height: 270px;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     position: absolute;
     z-index: -1;
+    width: 708px;
+    height: 609px;
     top: 0;
     padding: 0;
   }
 
   @media (min-width: $desktop-width) {
+    width: 552px;
+    height: 499px;
     top: 29px;
     left: 557px;
   }

@@ -1,14 +1,13 @@
 .example {
-  width: 280px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 49px;
   padding: 0 20px 40px;
   background-color: #eaeaea;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     position: relative;
-    width: 708px;
-    margin: 0 auto;
     margin-top: 45px;
     padding: 0 30px;
     background: linear-gradient(to bottom, #ffffff 574px, #f2f2f2 574px);
@@ -16,8 +15,7 @@
 
   @media (min-width: $desktop-width) {
     position: relative;
-    width: 1220px;
-    margin: 0 auto;
+    width: 1440px;
     margin-top: 69px;
     padding: 0 110px 75px;
     background: linear-gradient(to bottom, #ffffff 136px, #f2f2f2 136px);
@@ -215,17 +213,19 @@
 }
 
 .example__container-picture {
+  width: 280px;
+  margin: 0 auto;
   margin-top: 20px;
   display: flex;
 
   @media (min-width: $tablet-width) {
+    width: 560px;
     margin-top: 99px;
     padding: 0 74px;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    width: 560px;
     margin-top: 0;
     top: 0;
     right: 0;
@@ -254,6 +254,25 @@
   @media (min-width: $tablet-width) {
     height: 512px;
   }
+
+  &:hover {
+    background-color: #68b738;
+  }
+
+  &:hover .example__knob {
+    fill: #68b738;
+    stroke: #68b738;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    opacity: 0.6;
+  }
+
+  &:active .example__knob {
+    fill: #5eaa2f;
+    stroke: #5eaa2f;
+  }
 }
 
 .example__knob {
@@ -262,4 +281,6 @@
   top: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  fill: #666666;
+  stroke: #666666;
 }

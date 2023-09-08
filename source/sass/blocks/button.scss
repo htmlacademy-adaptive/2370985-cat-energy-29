@@ -24,12 +24,26 @@
   background-color: #68b738;
 }
 
+.button--primary:hover {
+  background-color: #5eaa2f;
+}
+
+.button--primary:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5eaa2f;
+}
+
 .button--secondary {
   display: grid;
   align-items: center;
   padding: 10px 16px;
   color: #444444;
   background-color: #f2f2f2;
+}
+
+.button--secondary:hover,
+.button--secondary:active {
+  background-color: #ebebeb;
 }
 
 .button--no-border {
