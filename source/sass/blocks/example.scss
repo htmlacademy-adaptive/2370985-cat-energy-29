@@ -260,8 +260,7 @@
   }
 
   &:hover .example__knob {
-    fill: #68b738;
-    stroke: #68b738;
+    background-image: url("../img/sprite.svg#knob-hover");
   }
 
   &:active {
@@ -270,17 +269,16 @@
   }
 
   &:active .example__knob {
-    fill: #5eaa2f;
-    stroke: #5eaa2f;
+    background-image: url("../img/sprite.svg#knob-active");
   }
 }
 
 .example__knob {
-  height: 40px;
   position: absolute;
+  width: 40px;
+  height: 40px;
   top: 50%;
   transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.svg#knob");
   cursor: pointer;
-  fill: #666666;
-  stroke: #666666;
 }

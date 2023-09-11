@@ -212,7 +212,7 @@
     top: 50%;
     transform: translateY(-50%);
     right: 0;
-    background-image: url("../img/icon-arrow.svg");
+    background-image: url("../img/sprite.svg#icon-arrow");
     background-repeat: no-repeat;
   }
 
@@ -223,7 +223,7 @@
 
   &:hover {
     &::after {
-      background-image: url("../img/icon-arrow-hover.svg");
+      background-image: url("../img/sprite.svg#icon-arrow-hover");
     }
   }
 
@@ -231,7 +231,7 @@
     opacity: 0.3;
 
     &::after {
-      background-image: url("../img/icon-arrow-hover.svg");
+      background-image: url("../img/sprite.svg#icon-arrow-hover");
     }
   }
 }
