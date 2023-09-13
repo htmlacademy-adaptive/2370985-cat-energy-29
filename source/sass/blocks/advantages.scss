@@ -24,7 +24,7 @@
   @media (min-width: $desktop-width) {
     width: 1440px;
     margin-top: 71px;
-    padding: 0 110px 69px;
+    padding: 0 110px;
 
     &::after {
       display: none;
@@ -58,8 +58,8 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 249px);
-    gap: 94px 137px;
-    margin-top: 72px;
+    gap: 37px 137px;
+    margin-top: 32px;
     padding-right: 75px;
     justify-content: center;
     counter-reset: section;
@@ -69,6 +69,7 @@
     grid-template-columns: repeat(4, 249px);
     gap: 0;
     justify-content: space-between;
+    padding-right: 0;
   }
 }
 
