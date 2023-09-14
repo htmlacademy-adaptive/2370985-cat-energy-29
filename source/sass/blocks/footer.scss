@@ -4,7 +4,6 @@
 
   @media (min-width: $desktop-width) {
     position: relative;
-    width: 1440px;
   }
 }
 
@@ -16,17 +15,24 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    padding: 61px 30px;
-    background-color: #f2f2f2;
+    padding: 60px 30px;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    gap: 87px;
+    gap: 96px;
     width: auto;
     padding: 60px 78px 60px 80px;
     top: 95px;
     left: 110px;
+    background-color: #ffffff;
+  }
+}
+
+.footer-container__contacts--color-alternative {
+  background-color: #f2f2f2;
+
+  @media (min-width: $desktop-width) {
     background-color: #ffffff;
   }
 }
@@ -52,8 +58,6 @@
 }
 
 .footer-container__adress {
-  justify-self: end;
-
   @media (min-width: $tablet-width) {
     padding-right: 40px;
     text-align: right;
@@ -89,14 +93,31 @@
 .footer-container__map {
   display: block;
   width: 100%;
+  background-color: #f2f2f2;
+  border: none;
 
   @media (min-width: $tablet-width) {
     height: 400px;
   }
 }
 
+.footer-container__map--nojs {
+  background-image: url("../img/map-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/map-tablet.png");
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/map-desktop.png");
+  }
+}
+
 .footer-container__link-container {
   padding: 0 20px;
+  background-color: #f2f2f2;
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
@@ -107,31 +128,43 @@
   }
 }
 
-.footer-container__link-container--background-color-secondary {
-  background-color: #f2f2f2;
-}
-
 .footer-container__link {
   list-style: none;
   display: flex;
   flex-direction: column;
-  margin: 0;
+  margin: 0 auto;
   padding: 40px 0;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     padding: 55px 0;
   }
 
   @media (min-width: $desktop-width) {
+    width: 1220px;
     padding: 66px 0;
   }
 }
 
 .footer-container__item-link {
   position: relative;
+}
+
+.footer-container__item-link:first-child {
+  @media (min-width: $tablet-width) {
+    margin-right: 160px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 416px;
+  }
+}
+
+.footer-container__item-link--margin-right {
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
 }
 
 .footer-container__item-link:not(:last-child)::after {
@@ -157,19 +190,22 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 0;
   }
+
+  &:hover .footer-container__logo-icon,
+  &:focus-within .footer-container__logo-icon {
+    background-color: #3e3e3e;
+  }
+
+  &:active .footer-container__logo-icon {
+    background-color: #6b6b6b;
+  }
 }
 
 .footer-container__logo-icon {
-  fill: #111111;
-}
-
-.footer-container__logo:hover .footer-container__logo-icon,
-.footer-container__logo:focus-within .footer-container__logo-icon {
-  fill: #3e3e3e;
-}
-
-.footer-container__logo:active .footer-container__logo-icon {
-  fill: #6b6b6b;
+  width: 128px;
+  height: 24px;
+  mask-image: url("../img/sprite.svg#logo-cat-energy");
+  background-color: #111111;
 }
 
 .footer-container__list {
@@ -194,22 +230,32 @@
 }
 
 .social-list__link {
+  display: block;
   width: 28px;
   height: 22px;
+  background-color: #666666;
+
+  &:hover,
+  &:focus-within {
+    background-color: #68b738;
+  }
+
+  &:active {
+    background-color: #68b738;
+    opacity: 0.3;
+  }
 }
 
-.social-list__link-icon {
-  fill: #666666;
+.social-list__link--one {
+  mask-image: url("../img/sprite.svg#vk");
 }
 
-.social-list__link:hover .social-list__link-icon,
-.social-list__link:focus-within .social-list__link-icon {
-  fill: #68b738;
+.social-list__link--two {
+  mask-image: url("../img/sprite.svg#youtube");
 }
 
-.social-list__link:active .social-list__link-icon {
-  fill: #68b738;
-  opacity: 0.3;
+.social-list__link--three {
+  mask-image: url("../img/sprite.svg#telegram");
 }
 
 .footer-container__container {
@@ -244,18 +290,16 @@
 .creator__link {
   width: 27px;
   height: 34px;
-}
+  mask-image: url("../img/sprite.svg#logo-html");
+  background-color: #666666;
 
-.creator__link-icon {
-  fill: #666666;
-}
+  &:hover,
+  &:focus-within {
+    background-color: #68b738;
+  }
 
-.creator__link:hover .creator__link-icon,
-.creator__link:focus-within .creator__link-icon {
-  fill: #68b738;
-}
-
-.creator__link:active .creator__link-icon {
-  fill: #68b738;
-  opacity: 0.3;
+  &:active {
+    background-color: #68b738;
+    opacity: 0.3;
+  }
 }
