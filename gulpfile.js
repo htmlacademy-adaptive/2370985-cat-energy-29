@@ -9,6 +9,7 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
+import { stacksvg } from 'gulp-stacksvg';
 import del from 'del';
 import browser from 'browser-sync';
 
@@ -69,28 +70,37 @@ const createWebp = () => {
 // SVG
 
 const svg = () =>
-gulp.src(['source/img/*.svg'])
-.pipe(svgo())
-.pipe(gulp.dest('build/img'));
+  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img'));
+
+const stack = () => {
+  return gulp.src(
+    'source/img/icons/*.svg')
+    .pipe(svgo())
+    .pipe(stacksvg({ output: 'sprite' }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+}
 
 // Copy
 
 const copy = (done) => {
   gulp.src([
-  'source/fonts/**/*.{woff2,woff}',
-  'source/*.ico',
+    'source/fonts/**/*.{woff2,woff}',
+    'source/*.ico',
   ], {
-  base: 'source'
+    base: 'source'
   })
-  .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('build'))
   done();
-  }
+}
 
 // Clean
 
 const clean = () => {
   return del('build');
-  };
+};
 
 // Server
 
@@ -111,7 +121,7 @@ const server = (done) => {
 const reload = (done) => {
   browser.reload();
   done();
-  }
+}
 
 // Watcher
 
@@ -130,6 +140,7 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
+    stack,
     createWebp
   ),
 );
@@ -143,10 +154,11 @@ export default gulp.series(
     html,
     scripts,
     svg,
+    stack,
     createWebp
   ),
   gulp.series(
     server,
     watcher
-    )
+  )
 );
