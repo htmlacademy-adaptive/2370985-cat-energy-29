@@ -29,23 +29,3 @@ img {
   max-width: 100%;
   object-fit: contain;
 }
-
-.form-container__input[type="number"]::-webkit-outer-spin-button,
-.form-container__input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.form-container__input[type="number"] {
-  -moz-appearance: textfield;
-}
-.form-container__input[type="number"]:hover,
-.form-container__input[type="number"]:focus {
-  -moz-appearance: number-input;
-}
-
-.form-container__input[type=number]::-webkit-inner-spin-button,
-.form-container__input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}

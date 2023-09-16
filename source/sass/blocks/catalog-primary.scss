@@ -97,7 +97,7 @@
   }
 }
 
-.product-list__card-title--line::after {
+.product-list__card--line::after {
   position: absolute;
   content: "";
   height: 1px;
@@ -111,7 +111,7 @@
   }
 }
 
-.product-list__card-title--line:last-child::before {
+.product-list__card--line:last-child::before {
   position: absolute;
   content: "";
   height: 1px;

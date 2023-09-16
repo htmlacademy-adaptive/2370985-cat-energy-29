@@ -79,7 +79,6 @@ const stack = () => {
     'source/img/icons/*.svg')
     .pipe(svgo())
     .pipe(stacksvg({ output: 'sprite' }))
-    .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'));
 }
 
@@ -89,6 +88,7 @@ const copy = (done) => {
   gulp.src([
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
+    'source/*.webmanifest',
   ], {
     base: 'source'
   })
@@ -121,15 +121,15 @@ const server = (done) => {
 const reload = (done) => {
   browser.reload();
   done();
-}
+  }
 
 // Watcher
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/js/*.js', gulp.series(scripts));
-  gulp.watch('source/*.html').on('change', browser.reload);
-}
+  gulp.watch('source/js/script.js', gulp.series(scripts));
+  gulp.watch('source/*.html', gulp.series(html, reload));
+  }
 
 export const build = gulp.series(
   clean,
