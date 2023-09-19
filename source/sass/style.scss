@@ -4,12 +4,20 @@
 @import "global/visually-hidden.scss";
 //
 @import "blocks/button.scss";
-@import "blocks/header.scss";
+@import "blocks/main-header.scss";
+@import "blocks/popover-container.scss";
 @import "blocks/hero.scss";
 @import "blocks/varieties.scss";
 @import "blocks/advantages.scss";
 @import "blocks/example.scss";
-@import "blocks/footer.scss";
-@import "blocks/catalog-primary.scss";
-@import "blocks/catalog-secondary.scss";
-@import "blocks/form.scss";
+@import "blocks/footer-container.scss";
+@import "blocks/social-list.scss";
+@import "blocks/creator.scss";
+@import "blocks/catalog-products-primary.scss";
+@import "blocks/product-list.scss";
+@import "blocks/features.scss";
+@import "blocks/catalog-products-secondary.scss";
+@import "blocks/product-list-secondary.scss";
+@import "blocks/features-secondary.scss";
+@import "blocks/form-container.scss";
+@import "blocks/input.scss";
