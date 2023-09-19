@@ -1,0 +1,40 @@
+.features-secondary {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 72px;
+    gap: 19px;
+  }
+}
+
+.features-secondary__desc {
+  line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    justify-self: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-self: start;
+    align-self: center;
+  }
+}
+
+.features-secondary__price {
+  margin: 0;
+  line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    justify-self: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: center;
+  }
+}
