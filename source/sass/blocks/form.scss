@@ -185,6 +185,21 @@
   }
 }
 
+.form-container__input[type="number"]::-webkit-outer-spin-button,
+.form-container__input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.form-container__input[type="number"] {
+  appearance: textfield;
+}
+
+.form-container__input[type="number"]:hover,
+.form-container__input[type="number"]:focus {
+  appearance: number-input;
+}
+
 .form-container__filter--varieties {
   position: relative;
   padding-top: 22px;

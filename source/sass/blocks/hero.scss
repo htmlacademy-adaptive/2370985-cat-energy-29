@@ -1,26 +1,27 @@
 .hero {
   position: relative;
   width: 100%;
-  box-sizing: border-box;
+}
+
+.hero__background {
+  position: absolute;
+  width: 100%;
+  height: 302px;
 
   @media (min-width: $desktop-width) {
-    width: 1440px;
-    margin: 0 auto;
+    height: 694px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.hero__container {
-  position: relative;
-  z-index: 1;
-  margin: 0 auto;
-  padding: 0 20px;
-
+.hero__background-image {
   &::after {
     position: absolute;
     content: "";
     display: block;
     width: 100%;
-    height: 302px;
+    height: 100%;
     padding: 0;
     margin: 0;
     top: 0;
@@ -29,7 +30,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #68b738;
-    z-index: -2;
 
     @media (min-resolution: 2dppx) {
       background-image: url("/img/background-cat-mobile@2x.jpg");
@@ -40,18 +40,14 @@
     position: absolute;
     content: "";
     width: 100%;
-    height: 302px;
+    height: 100%;
     top: 0;
     left: 0;
     background-color: rgba(104, 183, 56, 0.85);
-    z-index: -1;
+    z-index: 1;
   }
 
   @media (min-width: $tablet-width) {
-    width: 708px;
-    margin: 0 auto;
-    padding: 0 30px;
-
     &::after {
       display: none;
     }
@@ -62,24 +58,22 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 1220px;
-    margin: 0 auto;
-    padding: 0 110px;
+    position: relative;
+    grid-column: 2/3;
+    height: 694px;
 
     &::after {
       display: block;
-      width: 720px;
-      height: 694px;
+      width: 100%;
+      height: 100%;
       top: -114px;
-      right: 0;
-      left: auto;
+      left: 0;
       background-image: url("/img/background-cat-desktop.jpg");
       background-repeat: no-repeat;
-      z-index: -2;
+      background-size: cover;
 
       @media (min-resolution: 2dppx) {
         background-image: url("/img/background-cat-desktop@2x.jpg");
-        background-size: cover;
       }
     }
 
@@ -87,14 +81,33 @@
       display: block;
       position: absolute;
       content: "";
-      width: 720px;
-      height: 694px;
+      width: 100%;
+      height: 100%;
       top: -114px;
       right: 0;
       left: auto;
       background-color: rgba(104, 183, 56, 0.85);
-      z-index: -1;
+      z-index: 1;
     }
+  }
+}
+
+.hero__container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 0 110px;
+    margin: 0 auto;
   }
 }
 

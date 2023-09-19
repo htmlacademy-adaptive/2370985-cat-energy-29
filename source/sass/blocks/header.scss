@@ -86,7 +86,7 @@
   }
 }
 
-.popover__toggle {
+.main-header__toggle {
   position: relative;
   margin-left: auto;
   width: 24px;
@@ -101,7 +101,7 @@
   }
 }
 
-.popover__toggle::after {
+.main-header__toggle::after {
   content: "";
   position: absolute;
   width: 24px;
@@ -112,7 +112,7 @@
   box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
 }
 
-.main-nav--opened .popover__toggle {
+.main-nav--opened .main-header__toggle {
   &::after,
   &::before {
     content: "";
@@ -160,7 +160,7 @@
   }
 }
 
-.popover-container {
+.main-header__popover {
   display: none;
 
   @media (min-width: 320px) {
@@ -170,6 +170,11 @@
   @media (min-width: $tablet-width) {
     display: block;
     position: static;
+  }
+}
+
+.popover-container {
+  @media (min-width: $tablet-width) {
     padding-right: 3px;
   }
 }
