@@ -362,7 +362,7 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0 80px;
+    gap: 13px 80px;
   }
 }
 
@@ -440,7 +440,7 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 285px 285px 285px 145px;
-    gap: 0 40px;
+    gap: 13px 40px;
   }
 }
 
