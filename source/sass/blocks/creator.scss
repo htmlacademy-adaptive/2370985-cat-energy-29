@@ -1,18 +1,19 @@
 .creator {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
   justify-content: space-between;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    gap: 7px 23px;
+  }
 }
 
 .creator__name {
   padding: 7px 0;
   font-size: 16px;
   line-height: 20px;
-  text-decoration: none;
   color: #444444;
-
-  @media (min-width: $tablet-width) {
-    margin-right: 23px;
-  }
 
   &:active {
     opacity: 0.3;
